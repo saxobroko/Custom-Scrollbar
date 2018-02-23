@@ -1,0 +1,42 @@
+{
+	"resources": {
+		"body": [{
+			"type": "style",
+			"src": "./css/{{ options.color }}.css"
+		}]
+	},
+	"preview": {
+		"handlers": [
+		    {
+      "options": ["color"],
+	  "reload": true,
+      "execute": "INSTALL_SCOPE.updateAlignment(INSTALL_OPTIONS)"
+    },{
+			"options": ["_default"],
+			"execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+		}
+		]},
+	"options": {
+		"properties": {
+			"color": {
+				"title": "Color",
+				"description": "What color should the scrollbar be?",
+				"type": "string",
+				"default": "gr",
+				"enum": ["bl", "blu", "gr", "gre", "or", "pk", "pu", "rd", "wh", "yl"],
+				"enumNames": {
+					"bl": "Black",
+					"blu": "Blue",
+					"gr": "Gray",
+					"gre": "Green",
+					"or": "Orange",
+					"pk": "Pink",
+					"pu": "Purple",
+					"rd": "Red",
+					"wh": "White",
+					"yl": "Yellow"
+				}
+			}
+		}
+	}
+}
